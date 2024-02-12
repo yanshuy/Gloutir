@@ -100,16 +100,20 @@ nav a:hover {
 
 .navbar-container img:hover {
   animation: jiggle 0.4s;
-  transition: all ease-out;
+  transition: all linear;
 }
 
 @keyframes jiggle {
   0% {
-    transform: skew(-15deg, -15deg);
+    transform: skew(-20deg, -15deg);
   }
 
-  95% {
-    transform: skew(5deg, 5deg);
+  75% {
+    transform: skew(0deg, 0deg);
+  }
+
+  90% {
+    transform: skew(0deg, -2deg);
   }
 
   100% {
