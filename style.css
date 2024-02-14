@@ -455,9 +455,10 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   border: 1px solid var(--black);
-  border-radius: 20%;
-  border-block: 10px solid var(--black);
+  border-radius: 5em 5em 5em 5em;
+  border-block: 5px solid var(--black);
 }
 
 .marquee-box {
@@ -482,13 +483,14 @@ nav a:hover {
 }
 
 .marquee-box ul {
+  padding-block: 2rem;
   width: max-content;
   list-style: none;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   gap: 1rem;
-  border-bottom: 1px solid var(--black);
+  /* border-bottom: 1px solid var(--black); */
   animation: marquee2 40s linear infinite;
 }
 
@@ -503,5 +505,35 @@ nav a:hover {
 }
 
 .marquee-box li img {
-  width: 12.5rem;
+  width: 10.5rem;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: #000;
+}
+
+.section3-imgbox {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  width: 87%;
+  overflow-x: hidden;
+}
+
+#imgbox-img1 img {
+  height: 30rem;
+}
+
+#imgbox-img2 img {
+  height: 30rem;
+}
+
+#imgbox-img3 img {
+  height: 30rem;
+}
+
+#imgbox-img4 img {
+  height: 30rem;
 }
