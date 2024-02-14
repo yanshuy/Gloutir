@@ -152,7 +152,7 @@ nav a:hover {
 }
 
 .header-semibold-text {
-  font-family: Inconsolata, monospace;
+  font-family: monospace;
   text-align: center;
   text-decoration: underline;
   font-size: 1.3rem;
@@ -247,7 +247,7 @@ nav a:hover {
     auto !important;
 }
 
-.section-layout {
+.section1-layout {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -272,8 +272,7 @@ nav a:hover {
   border-bottom-width: 10px;
   border-radius: 20%;
   box-shadow: 0px 1px 0.8px hsl(var(--shadow-color) / 1),
-    0px 13.4px 10.1px -2.5px hsl(var(--shadow-color) / 0.5),
-    0.4px 100px 75px -5px hsl(var(--shadow-color) / 0.21);
+    0.4px 50px 75px -5px hsl(var(--shadow-color) / 0.35);
 }
 
 .pookie-bg img {
@@ -300,4 +299,209 @@ nav a:hover {
   100% {
     transform: rotate(180deg);
   }
+}
+
+.section1-text {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5.5rem;
+  padding-bottom: 5.5rem;
+  margin-inline: 5%;
+  padding-inline: 5%;
+  border-bottom: 1px solid var(--black);
+}
+
+.section1-text-left {
+  max-width: 50%;
+}
+
+.section1-text-left h3 {
+  text-decoration: underline;
+  font-family: monospace;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.section1-text-left h1 {
+  margin-top: 2.5rem;
+  font-size: 6rem;
+  font-family: "PP Neue World Condensed";
+  font-weight: 100;
+  color: #222;
+  letter-spacing: 1.5px;
+  line-height: 5rem;
+}
+
+.section1-text-right {
+  max-width: 41%;
+  flex: 0 1 100%;
+}
+
+.section1-text-right p {
+  margin-top: 3.5rem;
+  font-family: Arial, sans-serif;
+  font-size: 1.54vw;
+  color: #444;
+  letter-spacing: -0.8px;
+}
+
+.section2-layout {
+  margin-inline: 5%;
+  padding-inline: 5%;
+}
+
+.section2-layout h1 {
+  margin-top: 5.5rem;
+  font-family: Arial, sans-serif;
+  font-size: 5vw;
+  text-align: justify;
+  font-weight: 100;
+}
+
+.thick-text {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 5vw;
+  word-spacing: 7px;
+}
+
+.thin-text {
+  font-family: Arial, sans-serif;
+  font-weight: 100;
+  font-size: 5vw;
+}
+
+.line-text {
+  text-decoration: line-through;
+  font-weight: 700;
+}
+
+.section2-imgs {
+  margin-inline: 1%;
+  /* width: 70rem; */
+  /* padding-inline: 5%; */
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
+  transition: all linear;
+}
+
+.section2-imgs ul {
+  width: max-content;
+  padding-block: 5rem;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 7rem;
+  animation: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(calc(-50% - 3.5rem));
+  }
+}
+
+.section2-imgs li img {
+  height: 2rem;
+}
+
+.section2-text {
+  text-indent: 70px;
+  font-size: 2.9vw;
+  text-align: justify;
+  font-family: Arial, sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.section2-grid {
+  margin-top: 5rem;
+}
+
+.section2-grid ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.section2-grid li {
+  font-size: 1.5vw;
+  font-family: sans-serif;
+  padding: 1.5vw 10% 1.5vw 5%;
+  border-bottom: 1px solid var(--black);
+  cursor: cell;
+}
+
+.section2-grid li:hover {
+  font-weight: 700;
+}
+
+.section3-portfolio {
+  margin-top: 6rem;
+  margin-inline: 5%;
+  padding-inline: 5%;
+}
+
+.section3-portfolio-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--black);
+  border-radius: 20%;
+  border-block: 10px solid var(--black);
+}
+
+.marquee-box {
+  width: 85%;
+  margin-inline: 1%;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    rgb(255, 255, 255) 20%,
+    rgb(255, 255, 255) 80%,
+    transparent
+  );
+  mask: linear-gradient(
+    90deg,
+    transparent,
+    rgb(255, 255, 255) 20%,
+    rgb(255, 255, 255) 80%,
+    transparent
+  );
+  transition: all linear;
+}
+
+.marquee-box ul {
+  width: max-content;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  border-bottom: 1px solid var(--black);
+  animation: marquee2 40s linear infinite;
+}
+
+@keyframes marquee2 {
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
+.marquee-box li {
+  padding: 2rem;
+}
+
+.marquee-box li img {
+  width: 12.5rem;
 }
