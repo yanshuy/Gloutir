@@ -63,7 +63,7 @@ header {
   align-items: center;
   position: fixed;
   background-image: linear-gradient(rgba(240, 248, 255, 0.5), rgba(0, 0, 0, 0));
-  z-index: 10;
+  z-index: 100;
 }
 
 nav {
@@ -98,26 +98,70 @@ nav a:hover {
   transform: skew(0deg, 0deg);
 }
 
-.navbar-container img:hover {
-  animation: jiggle 0.4s;
-  transition: all linear;
+.navbar-container img:hover,
+.navbar-container img:focus,
+.navbar-container img:active {
+  -webkit-animation-name: hvr-wobble-to-bottom-right;
+  animation-name: hvr-wobble-to-bottom-right;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }
 
-@keyframes jiggle {
-  0% {
-    transform: skew(-20deg, -15deg);
+/* Wobble To Bottom Right */
+@-webkit-keyframes hvr-wobble-to-bottom-right {
+  16.65% {
+    -webkit-transform: translate(8px, 8px);
+    transform: translate(8px, 8px);
   }
-
-  75% {
-    transform: skew(0deg, 0deg);
+  33.3% {
+    -webkit-transform: translate(-6px, -6px);
+    transform: translate(-6px, -6px);
   }
-
-  90% {
-    transform: skew(0deg, -2deg);
+  49.95% {
+    -webkit-transform: translate(4px, 4px);
+    transform: translate(4px, 4px);
   }
-
+  66.6% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  83.25% {
+    -webkit-transform: translate(1px, 1px);
+    transform: translate(1px, 1px);
+  }
   100% {
-    transform: skew(0deg, 0deg);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+@keyframes hvr-wobble-to-bottom-right {
+  16.65% {
+    -webkit-transform: translate(8px, 8px);
+    transform: translate(8px, 8px);
+  }
+  33.3% {
+    -webkit-transform: translate(-6px, -6px);
+    transform: translate(-6px, -6px);
+  }
+  49.95% {
+    -webkit-transform: translate(4px, 4px);
+    transform: translate(4px, 4px);
+  }
+  66.6% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  83.25% {
+    -webkit-transform: translate(1px, 1px);
+    transform: translate(1px, 1px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
 
@@ -516,10 +560,10 @@ nav a:hover {
 
 .section3-imgbox {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   /* justify-content: center; */
   width: 87%;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 #imgbox-img1 img {
@@ -536,4 +580,203 @@ nav a:hover {
 
 #imgbox-img4 img {
   height: 30rem;
+}
+
+.section4-prizing-info {
+  margin-top: 10rem;
+  margin-inline: 5%;
+  padding-inline: 5%;
+}
+
+.section4-prizing-info-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section4-prizing-info-header h1 {
+  font-family: "PP Neue World Condensed";
+  font-size: 7.5rem;
+  color: #111;
+  line-height: 6.5rem;
+  font-weight: 100;
+}
+
+.section4-prizing-info-header p {
+  font-size: 1.4vw;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: -0.2px;
+}
+
+.section4-grids {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 4rem;
+}
+
+.section4-prizing-grid-1 {
+  border-top: 2px solid var(--black);
+  border-inline: 1px dashed var(--black);
+  border-bottom: 1px dashed var(--black);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2rem;
+}
+
+.section4-prizing-grid-1 h1 {
+  font-size: 2rem;
+  color: #222;
+  line-height: 2.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  padding-bottom: 2rem;
+  letter-spacing: -0.5px;
+  border-bottom: 1px solid var(--black);
+}
+
+.section4-prizing-grid-1 p {
+  padding-block: 2rem;
+  font-size: 1.25rem;
+  font-weight: 100;
+}
+
+#prize {
+  display: block;
+  font-family: "PP Neue World Condensed";
+  padding-block: 2rem;
+  font-size: 2.5rem;
+  border-bottom: 2px solid var(--black);
+}
+
+.section4-prizing-grid-1 .button {
+  width: 100%;
+}
+
+.section5 {
+  margin-top: 9rem;
+  margin-inline: 5%;
+  padding-inline: 5%;
+  display: flex;
+  gap: 10rem;
+}
+
+.section5-semibold-text {
+  font-family: monospace;
+  text-align: start;
+  text-decoration: underline;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #333;
+  font-weight: 700;
+}
+
+.section5-left {
+  min-width: max-content;
+}
+
+.section5-left h1 {
+  font-family: "PP Neue World Condensed";
+  font-size: 6.5vw;
+  line-height: 5.5vw;
+  color: #111;
+  font-weight: 100;
+  padding-top: 2rem;
+}
+
+.section5-right {
+  margin-top: 3.3rem;
+}
+
+.section5-right p {
+  font-size: 1.5vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section5-right p span {
+  text-decoration: underline;
+}
+
+.section5-layout {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 9rem;
+}
+
+.section5-layout #donut5 {
+  position: absolute;
+  width: 10rem;
+  top: -12.5%;
+  left: 10.5%;
+  z-index: 10;
+  transition: all 0.5s;
+}
+
+.section5-layout #donut5:hover,
+.section5-layout #donut5:focus,
+.section5-layout #donut5:active {
+  /* -webkit-transform: scale(1.2); */
+  transform: scaleX(1.4);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+.section5-layout .pookie-bg {
+  border-radius: 0 0 200px 200px;
+  /* border-top: 0; */
+  /* -webkit-box-shadow: inset 0px 10px 30px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 10px 30px 0px rgba(0, 0, 0, 0.75); */
+  box-shadow: 0px 1px 0.8px hsl(var(--shadow-color) / 1),
+    0.4px 50px 75px -5px hsl(var(--shadow-color) / 0.35);
+}
+
+.section5-layout img {
+  padding-block: 1.5%;
+  width: 85%;
+  animation: none;
+}
+
+.the-big-button {
+  margin-top: 8rem;
+  margin-inline: 5%;
+  padding-inline: 5%;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: repeat(1, 1fr);
+  text-align: center;
+  border: 1px solid var(--black);
+  border-radius: 200px;
+}
+
+.the-big-button h1 {
+  font-size: 8vw;
+  line-height: 6vw;
+  letter-spacing: 3px;
+  font-family: "PP Neue World Condensed";
+  font-weight: 100;
+}
+
+.the-big-button p {
+  font-size: 1.5vw;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.big-button-content {
+  padding-block: 6rem;
+}
+
+.the-big-button:hover {
+  background-color: #000;
+  color: white;
+  cursor: url("https://assets-global.website-files.com/62af52cf612c974768d3d8c9/6391280847a38f3cf5faf282_Group%202%20(7).svg"),
+    auto !important;
+}
+
+.footer {
+  margin-top: 8rem;
 }
