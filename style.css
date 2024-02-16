@@ -1,4 +1,5 @@
 @import url(https://db.onlinewebfonts.com/c/4e0d0691998de9900b2e9e2cf7b88991?family=PP+Neue+World+Condensed);
+/* @import "animate.css"; */
 
 * {
   margin: 0;
@@ -11,6 +12,9 @@ body {
   height: 100%;
   width: 100%;
   scroll-behavior: smooth;
+  scroll-padding: 8rem;
+  cursor: url("https://assets-global.website-files.com/62af52cf612c974768d3d8c9/639127c31795d00e2b0cc4c5_Group%207%20(4).svg"),
+    auto !important;
 }
 
 body {
@@ -20,8 +24,6 @@ body {
     ),
     url("https://assets-global.website-files.com/62af52cf612c974768d3d8c9/62c0a7c9079cd3102137a6a8_graph-paper.svg");
   background-position: 50%;
-  cursor: url("https://assets-global.website-files.com/62af52cf612c974768d3d8c9/639127c31795d00e2b0cc4c5_Group%207%20(4).svg"),
-    auto !important;
 }
 
 a {
@@ -98,71 +100,11 @@ nav a:hover {
   transform: skew(0deg, 0deg);
 }
 
-.navbar-container img:hover,
-.navbar-container img:focus,
-.navbar-container img:active {
-  -webkit-animation-name: hvr-wobble-to-bottom-right;
-  animation-name: hvr-wobble-to-bottom-right;
-  -webkit-animation-duration: 1s;
+.navbar-container #Gloutir:hover,
+.navbar-container #Gloutir:focus,
+.navbar-container #Gloutir:active {
+  animation: jello;
   animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-}
-
-/* Wobble To Bottom Right */
-@-webkit-keyframes hvr-wobble-to-bottom-right {
-  16.65% {
-    -webkit-transform: translate(8px, 8px);
-    transform: translate(8px, 8px);
-  }
-  33.3% {
-    -webkit-transform: translate(-6px, -6px);
-    transform: translate(-6px, -6px);
-  }
-  49.95% {
-    -webkit-transform: translate(4px, 4px);
-    transform: translate(4px, 4px);
-  }
-  66.6% {
-    -webkit-transform: translate(-2px, -2px);
-    transform: translate(-2px, -2px);
-  }
-  83.25% {
-    -webkit-transform: translate(1px, 1px);
-    transform: translate(1px, 1px);
-  }
-  100% {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-}
-@keyframes hvr-wobble-to-bottom-right {
-  16.65% {
-    -webkit-transform: translate(8px, 8px);
-    transform: translate(8px, 8px);
-  }
-  33.3% {
-    -webkit-transform: translate(-6px, -6px);
-    transform: translate(-6px, -6px);
-  }
-  49.95% {
-    -webkit-transform: translate(4px, 4px);
-    transform: translate(4px, 4px);
-  }
-  66.6% {
-    -webkit-transform: translate(-2px, -2px);
-    transform: translate(-2px, -2px);
-  }
-  83.25% {
-    -webkit-transform: translate(1px, 1px);
-    transform: translate(1px, 1px);
-  }
-  100% {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
 }
 
 .nav-right-button {
@@ -324,20 +266,15 @@ nav a:hover {
   width: 90%;
   transform-style: preserve-3d;
   animation: donut;
-  animation-delay: 0s;
-  animation-timeline: scroll();
+  /* animation-delay: 0s; */
+  animation-timeline: view();
   animation-fill-mode: forwards;
   animation-direction: alternate;
-  transition: all ease;
 }
 
 @keyframes donut {
   0% {
     transform: rotate(0deg);
-  }
-
-  80% {
-    transform: rotate(180deg);
   }
 
   100% {
@@ -352,7 +289,7 @@ nav a:hover {
   padding-bottom: 5.5rem;
   margin-inline: 5%;
   padding-inline: 5%;
-  border-bottom: 1px solid var(--black);
+  /* border-bottom: 1px solid var(--black); */
 }
 
 .section1-text-left {
@@ -558,6 +495,23 @@ nav a:hover {
   background-color: #000;
 }
 
+.line-1 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0.5px;
+  width: 0%;
+  background-color: #000;
+  animation: line-1 forwards;
+  animation-timeline: view();
+}
+
+@keyframes line-1 {
+  to {
+    width: 90%;
+  }
+}
+
 .section3-imgbox {
   display: flex;
   /* align-items: center; */
@@ -719,10 +673,8 @@ nav a:hover {
 .section5-layout #donut5:hover,
 .section5-layout #donut5:focus,
 .section5-layout #donut5:active {
-  /* -webkit-transform: scale(1.2); */
-  transform: scaleX(1.4);
-  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  animation: rubberBand;
+  animation-duration: 1s;
 }
 
 .section5-layout .pookie-bg {
