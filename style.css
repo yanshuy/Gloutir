@@ -328,6 +328,32 @@ nav a:hover {
   letter-spacing: -0.8px;
 }
 
+.line-1 {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0.5px;
+  width: 90%;
+  background-color: #000;
+  animation: forwards;
+  animation-timeline: view();
+}
+
+#donut1 {
+  position: absolute;
+  top: -3.25rem;
+  left: calc(50% - 4.5rem);
+  /* transform: translate(-50%, -50%); */
+  width: 9rem;
+  z-index: 10;
+  /* transition: all 0.5s; */
+}
+
+.in-view {
+  animation: rubberBand;
+  animation-duration: 1s;
+}
+
 .section2-layout {
   margin-inline: 5%;
   padding-inline: 5%;
@@ -493,17 +519,6 @@ nav a:hover {
   height: 1px;
   width: 100%;
   background-color: #000;
-}
-
-.line-1 {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 0.5px;
-  width: 0%;
-  background-color: #000;
-  animation: line-1 forwards;
-  animation-timeline: view();
 }
 
 @keyframes line-1 {

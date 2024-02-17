@@ -77,7 +77,14 @@
           </p>
         </div>
       </div>
-      <div class="line-1"></div>
+      <div class="line-1">
+        <img
+          class="animation-element"
+          id="donut1"
+          src="https://assets-global.website-files.com/62af52cf612c974768d3d8c9/63ba29da3d3d7a2f8c56e7c8_dAsset%202donut2.svg"
+          alt="big donut"
+        />
+      </div>
       <div class="section2-layout">
         <h1>
           <span class="thick-text">Webflow Design & Development</span>,
@@ -394,4 +401,12 @@
       <div class="footer">Made With Cowboy Hat In Houston, Tx</div>
     </div>
   </body>
+  <script>
+    const element = document.querySelector(".animation-element");
+    const observer = new IntersectionObserver((entries) => {
+      element.classList.toggle("in-view", entries[0].isIntersecting);
+    });
+
+    observer.observe(element);
+  </script>
 </html>
