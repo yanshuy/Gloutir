@@ -97,15 +97,18 @@ nav a:hover {
 .navbar-container img {
   height: 43px;
   width: 120px;
-  transform: skew(0deg, 0deg);
 }
 
-.navbar-container #Gloutir:hover,
-.navbar-container #Gloutir:focus,
-.navbar-container #Gloutir:active {
+.mousedown-jello {
+  animation: jello 1.2s;
+}
+
+/* .navbar-container .mousedown-jello:hover,
+.navbar-container .mousedown-jello:focus,
+.navbar-container .mousedown-jello:active {
   animation: jello;
   animation-duration: 1s;
-}
+} */
 
 .nav-right-button {
   width: 100%;
@@ -408,10 +411,11 @@ nav a:hover {
   display: flex;
   flex-wrap: nowrap;
   gap: 7rem;
-  animation: marquee 40s linear infinite;
+  animation: scroll-inline linear forwards;
+  animation-timeline: scroll(root);
 }
 
-@keyframes marquee {
+@keyframes scroll-inline {
   to {
     transform: translateX(calc(-50% - 3.5rem));
   }
@@ -471,7 +475,7 @@ nav a:hover {
 .marquee-box {
   width: 85%;
   margin-inline: 1%;
-  overflow: hidden;
+  overflow: clip;
   -webkit-mask: linear-gradient(
     90deg,
     transparent,
@@ -528,27 +532,27 @@ nav a:hover {
 }
 
 .section3-imgbox {
-  display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
-  width: 87%;
-  overflow-x: auto;
+  width: 100%;
+  padding-inline: 5%;
+  overflow: hidden;
 }
 
-#imgbox-img1 img {
-  height: 30rem;
+.section3-imgbox ul {
+  width: 100%;
+  /* height: fit-content; */
+  display: grid;
+  grid-auto-flow: column;
+  grid-row-start: 1;
+  list-style: none;
 }
 
-#imgbox-img2 img {
-  height: 30rem;
+.section3-imgbox ul li {
+  /* min-height: max-content; */
 }
 
-#imgbox-img3 img {
-  height: 30rem;
-}
-
-#imgbox-img4 img {
-  height: 30rem;
+.imgbox-img img {
+  width: 35vw;
+  height: 100%;
 }
 
 .section4-prizing-info {
@@ -599,7 +603,7 @@ nav a:hover {
   color: #222;
   line-height: 2.2rem;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   padding-bottom: 2rem;
   letter-spacing: -0.5px;
   border-bottom: 1px solid var(--black);
@@ -607,7 +611,7 @@ nav a:hover {
 
 .section4-prizing-grid-1 p {
   padding-block: 2rem;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 100;
 }
 
@@ -711,9 +715,9 @@ nav a:hover {
   margin-top: 8rem;
   margin-inline: 5%;
   padding-inline: 5%;
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-rows: repeat(1, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   border: 1px solid var(--black);
   border-radius: 200px;
@@ -734,7 +738,7 @@ nav a:hover {
 }
 
 .big-button-content {
-  padding-block: 6rem;
+  padding: 5rem;
 }
 
 .the-big-button:hover {
