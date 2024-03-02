@@ -552,7 +552,7 @@ nav a:hover {
   width: 100%;
   display: flex;
   list-style: none;
-  transform: translateX(calc(var(--slider-index) * 50%));
+  transform: translateX(calc(var(--slider-index) * -50%));
   transition: transform 500ms ease-in-out;
 }
 

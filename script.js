@@ -21,7 +21,6 @@ logo.addEventListener("animationend", removeJello);
 
 document.addEventListener("click", (e) => {
   const sliderArrow = e.target.closest(".slider-arrow");
-  // console.log(sliderArrow);
   if (sliderArrow != null) moveSlider(sliderArrow);
 });
 
@@ -29,13 +28,20 @@ function moveSlider(sliderArrow) {
   const slider = sliderArrow
     .closest(".section3-imgbox")
     .querySelector(".slider");
+  const sliderLength = slider.children.length;
   const sliderIndex = parseInt(
     getComputedStyle(slider).getPropertyValue("--slider-index")
   );
-  if (sliderArrow.classList.contains("left-arrow-button")) {
-    slider.style.setProperty("--slider-index", sliderIndex + 1);
-  }
   if (sliderArrow.classList.contains("right-arrow-button")) {
+    slider.style.setProperty("--slider-index", sliderIndex + 1);
+    if (sliderIndex >= sliderLength - 1) {
+      slider.style.setProperty("--slider-index", 0);
+    }
+  }
+  if (sliderArrow.classList.contains("left-arrow-button")) {
     slider.style.setProperty("--slider-index", sliderIndex - 1);
+    if (sliderIndex - 1 < 0) {
+      slider.style.setProperty("--slider-index", 6);
+    }
   }
 }
