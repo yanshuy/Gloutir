@@ -19,6 +19,7 @@ logo.addEventListener("mouseover", addJello);
 
 logo.addEventListener("animationend", removeJello);
 
+//slider
 document.addEventListener("click", (e) => {
   const sliderArrow = e.target.closest(".slider-arrow");
   if (sliderArrow != null) moveSlider(sliderArrow);

@@ -807,6 +807,7 @@ li > img {
   text-align: center;
   border: 1px solid var(--black);
   border-radius: 200px;
+  transition: all 250ms ease;
 }
 
 .the-big-button h1 {
