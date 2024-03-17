@@ -43,7 +43,7 @@ a {
   color: var(--black);
 }
 
-.book {
+main {
   height: 100%;
   width: 100%;
 }
@@ -346,14 +346,13 @@ nav a:hover {
   position: absolute;
   top: -3.25rem;
   left: calc(50% - 4.5rem);
-  /* transform: translate(-50%, -50%); */
   width: 9rem;
   z-index: 10;
-  /* transition: all 0.5s; */
 }
 
 .in-view {
-  animation: rubberBand;
+  animation-name: rubberBand;
+  opacity: 1 !important;
   animation-duration: 1s;
 }
 
@@ -409,15 +408,16 @@ nav a:hover {
   padding-block: 5rem;
   list-style: none;
   display: flex;
-  flex-wrap: nowrap;
   gap: 7rem;
   animation: scroll-inline linear forwards;
   animation-timeline: scroll(root);
+  animation-range-start: 30%;
+  animation-range-end: 100%;
 }
 
 @keyframes scroll-inline {
   to {
-    transform: translateX(calc(-50% - 3.5rem));
+    transform: translateX(calc(-50%));
   }
 }
 
