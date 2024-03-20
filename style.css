@@ -1,5 +1,7 @@
-@import url(https://db.onlinewebfonts.com/c/4e0d0691998de9900b2e9e2cf7b88991?family=PP+Neue+World+Condensed);
-/* @import "animate.css"; */
+@font-face {
+  font-family: "PP Neue World Condensed";
+  src: url("./PP\ Neue\ World\ Condensed.woff") format("woff");
+}
 
 * {
   margin: 0;
@@ -174,21 +176,6 @@ nav a:hover {
 .header-paragraph span {
   text-decoration: underline;
 }
-
-/* button {
-  height: 55px;
-  width: 100%;
-  padding: 1.6rem 1.5rem;
-  border-radius: 5px;
-  background-color: goldenrod;
-  border: none;
-  box-shadow: 0px 1px 0.8px hsl(var(--shadow-color) / 1),
-    0px 2.5px 1.9px -1.2px hsl(var(--shadow-color) / 0.86),
-    0px 13.4px 10.1px -2.5px hsl(var(--shadow-color) / 0.64),
-    0.2px 42.8px 32.1px -3.7px hsl(var(--shadow-color) / 0.43),
-    0.4px 100px 75px -5px hsl(var(--shadow-color) / 0.21);
-  cursor: pointer;
-} */
 
 .button a {
   height: 100%;
@@ -614,10 +601,12 @@ li > img {
   letter-spacing: -2px;
   font-weight: 700;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  transition: all 250ms ease;
+  transition: all 300ms ease;
 }
 
 .portfolio-button:hover {
+  cursor: url("https://assets-global.website-files.com/62af52cf612c974768d3d8c9/6391280847a38f3cf5faf282_Group%202%20(7).svg"),
+    auto !important;
   background-color: var(--black);
   color: var(--white);
 }
@@ -807,7 +796,7 @@ li > img {
   text-align: center;
   border: 1px solid var(--black);
   border-radius: 200px;
-  transition: all 250ms ease;
+  transition: all 300ms ease;
 }
 
 .the-big-button h1 {
